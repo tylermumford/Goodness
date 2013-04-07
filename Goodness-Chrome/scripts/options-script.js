@@ -196,3 +196,5 @@ function bodyOnLoad() {
 	setupPhraseList();
 	setupUrlList();
 };
+
+bodyOnLoad();
