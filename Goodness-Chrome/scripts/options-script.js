@@ -1,3 +1,5 @@
+// This file is under copyright. See the COPYING.txt file for more information.
+
 function sendMessage(message) {
 	chrome.extension.sendRequest({message: message});
 };

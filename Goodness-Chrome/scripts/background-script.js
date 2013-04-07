@@ -1,3 +1,5 @@
+// This file is under copyright. See the COPYING.txt file for more information.
+
 function ascertainSituation() {
   if (!localStorage.runBefore) {
     // Actions to run on first launch
