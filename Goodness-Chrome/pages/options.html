@@ -1,0 +1,63 @@
+<!--
+This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Options</title>
+	<script type=text/javascript src=../scripts/DOM-functions.js></script>
+	<link type=text/css rel=stylesheet href=../stylesheets/options.css />
+	
+	<!-- Main script -->
+	<script type=text/javascript src=../scripts/options-script.js></script>
+</head>
+<body onload=bodyOnLoad()>
+<div id=container>
+	<h1>Goodness Extension</h1>
+	<h3>&mdash; OPTIONS PAGE &mdash;</h3>
+	<div id=general>
+		<p class=sectionTitle>General Settings</p>
+		<span class=titleCap>Options that affect Goodness itself.</span>
+		<br /><br />
+		
+		<div class=indent>
+		<button disabled>No settings here at this time</button>
+		</div>
+	</div>
+	<div id=filter>
+		<p class=sectionTitle>Filter Settings</p>
+		<span class=titleCap id=filterTitleCap>Please separate items with semicolons. (;)</span>
+		<br /><br />
+		
+		<div class=indent>
+		<div class=buttonWithCap>
+			<button id=filterModeToggle>Switch to MODENAME</button>
+			<span class=hoverHelp title="Edit Mode lets you change previous filter options.
+Add Mode lets you quickly add something to the filter.">(?)</span>
+		</div>
+		<div id=editModeContainer>
+		<textarea id=phraseList rows=3 cols=50></textarea>
+		<p id=phraseListCap class=inputCap>Webpage titles that match phrases in this list will be blocked.</p>
+		<textarea id=urlList rows=3 cols=50></textarea>
+		<p id=urlListCap class=inputCap>URLs (web addresses) that match phrases in this list will be blocked.</p>
+		<br />
+		</div>
+		<div id=addModeContainer>
+			<input id=phraseAdd size=46></input><button id=phraseAddButton disabled>Add</button>
+			<p class=inputCap>Phrases added here are blocked from webpage titles.</p>
+			<input id=urlAdd size=46></input><button id=urlAddButton disabled>Add</button>
+			<p class=inputCap>Phrases added here are blocked from URLs (web addresses).</p>
+		</div>
+		</div>
+	</div>
+	<div id=footer>
+		All changes are saved automatically before you leave this page.<br />
+		Built by Tyler Wayne, who can be found at <a href=http://sites.google.com/site/codehaven target=blank>code haven</a>.
+	</div>
+	<!--<input id=pass type=password></input>
+	<p id=pass-cap>Enter the password to view/edit the block list.</p>-->
+</div>
+</body>
+</html>

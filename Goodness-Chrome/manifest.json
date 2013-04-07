@@ -1,0 +1,15 @@
+﻿{
+	"name": "Goodness",
+	"description": "Goodness is a customizable filter that helps you be a better person.",
+	"version": "0.3.8.2",
+	"background_page": "pages/background.html",
+	"options_page": "pages/options.html",
+	"icons": {
+		"128": "images/logo.png",
+		"16": "images/logo-16.png"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	]
+}

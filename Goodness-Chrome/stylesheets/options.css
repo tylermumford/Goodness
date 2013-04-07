@@ -1,0 +1,85 @@
+/*
+This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+*/
+
+* {
+	font-family: Helvetica, Arial, sans-serif;
+}
+html {
+	background-image: -webkit-gradient(
+		radial,
+		50% 0, 0,
+		50% 0, 700,
+		from(#FFFFFF),
+		to(#C2E7F2)
+	);
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+div#container {
+	padding: 0 12px;
+}
+h1 {
+	font-family: "Garamond", serif;
+	font-weight: normal;
+	font-size: 48pt;
+	text-align: center;
+	text-shadow: #999999 0px -1px 0px;
+	margin: 10px 0 0 0;
+}
+h3 {
+	font-family: "Garamond", serif;
+	letter-spacing: 3px;
+	text-align: center;
+	margin-top: 0;
+}
+p.sectionTitle {
+	font-family: "Garamond", serif;
+	font-variant: small-caps;
+	font-size: 18pt;
+	margin-bottom: 0;
+	padding-top: 8px;
+}
+span.titleCap {
+	font-size: 10pt;
+	opacity: .6;
+}
+div.indent {
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+div.buttonWithCap {
+	padding-bottom: 16px;
+}
+span.hoverHelp {
+	cursor: help;
+	font-size: 10pt;
+	margin-left: 8px;
+}
+input, textarea {
+	font-family: monospace;
+	border-radius: 4px;
+}
+p.inputCap {
+	opacity: .6;
+	font-size: 10pt;
+	margin: -2px 0 13px 8px;
+}
+div#footer {
+	font-family: Garamond, serif;
+	text-align: center;
+	min-width: 640px;
+	max-width: 800px;
+	margin: 20px auto 0 auto;
+	padding: 8px 0 30px;
+	border-top: 1px solid #888888;
+}
+div#footer > a {
+	font-family: Garamond, serif;
+}

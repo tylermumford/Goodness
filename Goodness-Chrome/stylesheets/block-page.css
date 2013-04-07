@@ -1,0 +1,33 @@
+/*
+This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+*/
+
+* {
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+html {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(.12, #AAAAAA),
+		color-stop(1, #FF7777)
+	);
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 80px;
+	text-align: center;
+	text-shadow: rgba(100,50,50,255) 0 0 8px;
+}
+span#light-one, span#light-two {
+	text-shadow: none;
+	-webkit-transition: .4s ease all;
+}
