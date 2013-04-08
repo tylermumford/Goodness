@@ -24,3 +24,5 @@ function bodyOnLoad() {
 	
 	var flashInterval = setInterval(function() {repeat();}, 400);
 };
+
+bodyOnLoad();
