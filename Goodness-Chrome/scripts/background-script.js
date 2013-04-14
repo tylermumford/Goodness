@@ -41,7 +41,7 @@ function checkTabUrl(tab) {
       var applicableData = (urlsBlocked.length == 1 ? urlsBlocked[0] : urlsBlocked.join('|', 'ig'));
       if (tab.url.match(new RegExp(applicableData))) {
         console.log('Tab matches URL.');
-        chrome.tabs.update(tab.id, {url: chrome.extension.getURL('pages/block-page.html')}, null);
+        chrome.tabs.update(tab.id, {url: chrome.extension.getURL('views/block-page.html')}, null);
       }
     }
   }
@@ -54,13 +54,13 @@ function checkTabTitle(tab) {
       var applicableData = (phrasesBlocked.length == 1 ? phrasesBlocked[0] : phrasesBlocked.join('|', 'ig'));
       if (tab.title.match(new RegExp(applicableData, 'gi'))) {
         console.log('Tab matches phrase.');
-        chrome.tabs.update(tab.id, {url: chrome.extension.getURL('pages/block-page.html')}, null);
+        chrome.tabs.update(tab.id, {url: chrome.extension.getURL('views/block-page.html')}, null);
       }
     }
   }
 };
 
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.message == 'Phrases Updated')
     updatePhrases();
   else if (request.message == 'URLs Updated')
