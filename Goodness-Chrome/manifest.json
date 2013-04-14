@@ -5,6 +5,10 @@
   
   "manifest_version": 2,
   "minimum_chrome_version": "22",
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
 	
   "background": 
   {
@@ -15,13 +19,10 @@
     ],
     "persistent": false
   },
-	"options_page": "pages/options.html",
+	"options_page": "views/options.html",
+
 	"icons": {
 		"128": "images/logo.png",
 		"16": "images/logo-16.png"
-	},
-	"permissions": [
-		"tabs",
-		"<all_urls>"
-	]
+	}
 }
