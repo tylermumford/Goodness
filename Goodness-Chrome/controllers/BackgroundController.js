@@ -1,18 +1,5 @@
 // This file is under copyright. See the COPYING.txt file for more information.
 
-function ascertainSituation() {
-  if (!localStorage.runBefore) {
-    // Actions to run on first launch
-    localStorage.phrasesBlocked = '[{"empty": true}]';
-    localStorage.urlsBlocked = '[{"empty": true}]';
-    localStorage.runBefore = true;
-    
-    
-    // get the prompt page to open here
-    // Prompt page?
-  }
-}
-
 // Makes sure neither of the filters are corrupted
 if (!localStorage.phrasesBlocked)
   localStorage.phrasesBlocked = '[{"empty": true}]';
