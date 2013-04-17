@@ -1,23 +1,24 @@
 // This file is under copyright. See the COPYING.txt file for more information.
 
-// Makes sure neither of the filters are corrupted
+var Store = new StoreController();
+var Filter = new FilterController();
+
+// Makes sure neither of the lists are corrupted
 if (!localStorage.phrasesBlocked)
   localStorage.phrasesBlocked = '[{"empty": true}]';
 if (!localStorage.urlsBlocked)
   localStorage.urlsBlocked = '[{"empty": true}]';
 
 // Creates the global objects 'phrasesBlocked' and 'urlsBlocked'
-var phrasesBlocked = JSON.parse(localStorage.phrasesBlocked);
-var urlsBlocked = JSON.parse(localStorage.urlsBlocked);
+var phrasesBlocked = Store.getPhraseList();
+var urlsBlocked = Store.getURLList();
 
 // Updates those global objects
 function updatePhrases() {
-  phrasesBlocked = JSON.parse(localStorage.phrasesBlocked);
-  return;
+  phrasesBlocked = Store.getPhraseList();
 }
 function updateUrls() {
-  urlsBlocked = JSON.parse(localStorage.urlsBlocked);
-  return;
+  urlsBlocked = Store.getURLList();
 }
 
 function checkTabUrl(tab) {
@@ -56,11 +57,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   sendResponse({});
 });
 
-// URL filtering
-chrome.tabs.onCreated.addListener(function(tab) {
-  checkTabUrl(tab);
-  checkTabTitle(tab);
-});
+// Page filtering
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   checkTabUrl(tab);
   checkTabTitle(tab);
