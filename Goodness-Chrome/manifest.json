@@ -1,7 +1,7 @@
 ﻿{
 	"name": "Goodness",
 	"description": "Goodness is a customizable filter that helps you be a better person.",
-	"version": "0.3.10.1",
+	"version": "0.3.12",
   
   "manifest_version": 2,
   "minimum_chrome_version": "22",
@@ -13,6 +13,7 @@
   "background": 
   {
     "scripts": [
+      "controllers/StoreController.js",
       "controllers/BackgroundController.js",
       "controllers/InstallEventController.js",
       "controllers/UpdateEventController.js"
