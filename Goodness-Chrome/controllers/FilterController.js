@@ -1,5 +1,9 @@
 // This file is under copyright. See the COPYING.txt file for more information.
 
+if (Store == undefined) {
+  var Store = new StoreController();
+}
+
 function FilterController () {
   this._domainWhitelist = Store.getDomainWhitelist();
   this._phraseList = Store.getPhraseList();
@@ -40,4 +44,3 @@ FilterController.prototype.redirectTab = function(tab, checkResults) {
 FilterController.prototype.refreshLists = function() {
   FilterController.call(this);
 };
-
