@@ -14,12 +14,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   sendResponse({});
 });
 
-// Page filtering
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   var checkResults = Filter.checkTab(tab);
   if (checkResults.block) {
     Filter.redirectTab(tab, checkResults);
   }
-  //checkTabUrl(tab);
-  //checkTabTitle(tab);
 });
