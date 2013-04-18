@@ -49,11 +49,7 @@ function checkTabTitle(tab) {
 };
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.message == 'Phrases Updated')
-    updatePhrases();
-  else if (request.message == 'URLs Updated')
-    updateUrls();
-  
+  Filter.refreshLists();
   sendResponse({});
 });
 

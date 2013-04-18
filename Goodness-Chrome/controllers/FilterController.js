@@ -37,3 +37,7 @@ FilterController.prototype.redirectTab = function(tab, checkResults) {
   chrome.tabs.update(tab.id, {url: chrome.extension.getURL('views/block-page.html')}, null);
 };
 
+FilterController.prototype.refreshLists = function() {
+  FilterController.call(this);
+};
+

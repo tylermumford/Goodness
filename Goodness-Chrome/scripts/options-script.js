@@ -125,6 +125,7 @@ var filter = {
 		save: function() {
 			if (filter.urlList.node.value) {
 				localStorage.urlsBlocked = JSON.stringify(filter.asArray(filter.urlList.node.value));
+				chrome.runtime.sendMessage({'message': 'hello!!'}, function(response) {} );
 			} else {
 				localStorage.urlsBlocked = '[{"empty": true}]';
 			}
@@ -136,6 +137,7 @@ var filter = {
 		save: function() {
 			if (filter.phraseList.node.value) {
 				localStorage.phrasesBlocked = JSON.stringify(filter.asArray(filter.phraseList.node.value));
+				chrome.runtime.sendMessage({'message': 'hello!!'}, function(response) {} );
 			} else {
 				localStorage.urlsBlocked = '[{"empty": true}]';
 			}
