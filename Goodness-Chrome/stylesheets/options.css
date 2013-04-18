@@ -1,83 +1,104 @@
 /* This file is under copyright. See the COPYING.txt file for more information. */
 
-
 * {
-	font-family: Helvetica, Arial, sans-serif;
+  font-family: Garamond, serif;
 }
+
+button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 9pt;
+}
+
 html {
-	background-image: -webkit-gradient(
-		radial,
-		50% 0, 0,
-		50% 0, 700,
-		from(#FFFFFF),
-		to(#C2E7F2)
-	);
-	min-height: 100%;
-	margin: 0;
-	padding: 0;
+  background-image: -webkit-gradient(
+    radial,
+    50% 0, 0,
+    50% 0, 700,
+    from(#FFFFFF),
+    to(#C2E7F2)
+  );
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
-div#container {
-	padding: 0 12px;
+
+.page-container {
+  padding: 0 12px;
 }
+
 h1 {
-	font-family: "Garamond", serif;
-	font-weight: normal;
-	font-size: 48pt;
-	text-align: center;
-	text-shadow: #999999 0px -1px 0px;
-	margin: 10px 0 0 0;
+  font-weight: normal;
+  font-size: 48pt;
+  text-align: center;
+  text-shadow: #999999 0px -1px 0px;
+  margin: 10px 0 0 0;
 }
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 0;
+}
+
 h3 {
-	font-family: "Garamond", serif;
-	letter-spacing: 3px;
-	text-align: center;
-	margin-top: 0;
+  /* Section Title */
+  font-size: 18pt;
+  font-variant: small-caps;
+  font-weight: normal;
+  margin-bottom: 0;
+  padding-top: 8px;
 }
-p.sectionTitle {
-	font-family: "Garamond", serif;
-	font-variant: small-caps;
-	font-size: 18pt;
-	margin-bottom: 0;
-	padding-top: 8px;
+
+.indent {
+  margin: 0 0 0 20px;
+  padding: 0;
 }
-span.titleCap {
-	font-size: 10pt;
-	opacity: .6;
+
+.subtext {
+  font-size: .9em;
+  opacity: .6;
 }
-div.indent {
-	margin: 0 0 0 20px;
-	padding: 0;
+
+.input-subtext {
+  margin: -2px 0 13px 8px;
 }
-div.buttonWithCap {
-	padding-bottom: 16px;
+
+.help-cursor {
+  cursor: help;
 }
-span.hoverHelp {
-	cursor: help;
-	font-size: 10pt;
-	margin-left: 8px;
-}
+
 input, textarea {
-	font-family: monospace;
-	border-radius: 4px;
+  font-family: monospace;
+  border-radius: 4px;
+  -webkit-transition: .8s ease width, height;
 }
-p.inputCap {
-	opacity: .6;
-	font-size: 10pt;
-	margin: -2px 0 13px 8px;
+
+input {
+  height: auto;
+  width: 30em;
 }
-div#footer {
-	font-family: Garamond, serif;
-	text-align: center;
-	min-width: 640px;
-	max-width: 800px;
-	margin: 20px auto 0 auto;
-	padding: 8px 0 30px;
-	border-top: 1px solid #888888;
+
+textarea {
+  height: 3.6em;
+  width: 40em;
 }
-div#footer > a {
-	font-family: Garamond, serif;
+
+footer {
+  text-align: center;
+  min-width: 640px;
+  max-width: 800px;
+  margin: 20px auto 0 auto;
+  padding: 8px 0 30px;
+  border-top: 1px solid #888888;
+}
+
+footer p {
+  margin: 1px;
+  padding: 1px;
 }
