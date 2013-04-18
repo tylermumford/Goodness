@@ -7,24 +7,33 @@ function FilterController () {
 };
 
 FilterController.prototype.checkTab = function(tab) {
+  var nextCheck;
+
   for (var eachDomain in this._domainWhitelist) {
-    if (tab.url.indexOf(eachDomain) != -1) {
-      return { 'block': false, 'reason': 'domain-whilisted' };
+    nextCheck = this._domainWhitelist[eachDomain];
+    if (tab.url.indexOf(nextCheck) != -1) {
+      return { 'block': false, 'reason': 'domain-whilisted', 'data': nextCheck };
     }
   }
 
   for (var eachURL in this._urlList) {
-    if (tab.url.indexOf(eachURL) != -1) {
-      return { 'block': true, 'reason': 'url-matched', 'part': eachURL };
+    nextCheck = this._urlList[eachURL];
+    if (tab.url.indexOf(nextCheck) != -1) {
+      return { 'block': true, 'reason': 'url-matched', 'data': nextCheck };
     }
   }
 
   for (var eachPhrase in this._phraseList) {
-    if (tab.title.indexOf(eachPhrase) != -1) {
-      return { 'block': true, 'reason': 'phrase-matched', 'part': eachPhrase };
+    nextCheck = this._phraseList[eachPhrase];
+    if (tab.title.indexOf(nextCheck) != -1) {
+      return { 'block': true, 'reason': 'phrase-matched', 'data': nextCheck };
     }
   }
 
   return { 'block': false, 'reason': 'not-matched' };
+};
+
+FilterController.prototype.redirectTab = function(tab, checkResults) {
+  chrome.tabs.update(tab.id, {url: chrome.extension.getURL('views/block-page.html')}, null);
 };
 
