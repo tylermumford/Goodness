@@ -4,8 +4,9 @@
 <html>
 <head>
 	<title>Options</title>
-	<script type="text/javascript" src="../scripts/DOM-functions.js"></script>
-	<link type="text/css" rel="stylesheet" href="../stylesheets/options.css" />
+	<script src="/scripts/DOM-functions.js"></script>
+	<script src="/controllers/StoreController.js"></script>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/options.css" />
 	</head>
 <body>
 <div id="container">
@@ -47,15 +48,13 @@ Add Mode lets you quickly add something to the filter.">(?)</span>
 		</div>
 	</div>
 	<div id="footer">
-		All changes are saved automatically before you leave this page.
+		<span id="saveStatus">All changes are saved automatically before you leave this page.</span>
     <br />
 		Built by Tyler Wayne, who can be found at <a href="http://tylerwayne.github.io" target="blank">his website</a>. If you'd like to donate, click <a href="http://tylerwayne.github.io/donate" target="_blank">here</a>.
 	</div>
-	<!--<input id="pass" type="password"></input>
-	<p id="pass-cap">Enter the password to view/edit the block list.</p>-->
-
-	<!-- Main script -->
-	<script type="text/javascript" src="../scripts/options-script.js"></script>
 </div>
+
+<!-- Main script -->
+<script type="text/javascript" src="/scripts/options-script.js"></script>
 </body>
 </html>
