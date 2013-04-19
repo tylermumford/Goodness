@@ -1,9 +1,9 @@
 // This file is under copyright. See the COPYING.txt file for more information.
 
-(function()) {
+(function() {
   var Store = new StoreController();
 
   var toggleEntryMode = function() {
-    
-  }
+
+  };
 }())

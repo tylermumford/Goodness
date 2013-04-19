@@ -18,14 +18,14 @@ var filter = {
     } else {
       filter.setModeToEdit();
     }
-    $id('filterModeToggle').onclick = function() { filter.toggleMode(); };
+    $id('entryModeToggle').onclick = function() { filter.toggleMode(); };
     
     console.log('The filter has been initialized.');
     return;
   },
   setModeToAdd: function() {
-    $id('filterModeToggle').innerText = 'Switch to Edit Mode';
-    $id('filterTitleCap').innerText = 'Items must be added one at a time.';
+    $id('entryModeToggle').innerText = 'Switch to Edit Mode';
+    $id('filterSectionSubtext').innerText = 'Items must be added one at a time.';
     $id('addModeContainer').style.display = '';
     $id('editModeContainer').style.display = 'none';
     localStorage.filterMode = 'add';
@@ -34,8 +34,8 @@ var filter = {
     return;
   },
   setModeToEdit: function() {
-    $id('filterModeToggle').innerText = 'Switch to Add Mode';
-    $id('filterTitleCap').innerText = 'Please separate items with semicolons. (;)';
+    $id('entryModeToggle').innerText = 'Switch to Add Mode';
+    $id('filterSectionSubtext').innerText = 'Please separate items with semicolons. (;)';
     $id('addModeContainer').style.display = 'none';
     $id('editModeContainer').style.display = '';
     localStorage.filterMode = 'edit';
@@ -151,11 +151,9 @@ var filter = {
 function setupPhraseList() {
   $id('phraseList').onfocus = function(event) {
     filter.phraseList.save();
-    $id('phraseListCap').style.opacity = 1;
   };
   $id('phraseList').onblur = function(event) {
     filter.phraseList.save();
-    $id('phraseListCap').style.opacity = .6;
   };
   var currentData = JSON.parse(localStorage.phrasesBlocked);
   if (currentData[0].empty) return;
@@ -169,11 +167,9 @@ function setupPhraseList() {
 function setupUrlList() {
   $id('urlList').onfocus = function(event) {
     filter.urlList.save();
-    $id('urlListCap').style.opacity = 1;
   };
   $id('urlList').onblur = function(event) {
     filter.urlList.save();
-    $id('urlListCap').style.opacity = .6;
   };
   var currentData = JSON.parse(localStorage.urlsBlocked);
   if (currentData[0].empty) return;

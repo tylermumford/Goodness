@@ -66,6 +66,7 @@ h3 {
 }
 
 .input-subtext {
+  display: block;
   margin: -2px 0 13px 8px;
 }
 

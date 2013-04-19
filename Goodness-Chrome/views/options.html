@@ -25,26 +25,38 @@
 
   <section id="filter">
     <h3>Filter Settings</h3>
-    <p class="subtext" id="filterTitleCap">Please separate items with semicolons. (;)</p>
+    <p class="subtext" id="filterSectionSubtext">Please separate items with semicolons. (;)</p>
     
     <div class="indent">
-      <button id="filterModeToggle">Switch to MODENAME</button>
-      <span class="help-cursor subtext" title="Edit Mode lets you change previous filter options. Add Mode lets you quickly add something to the filter.">(?)</span>
+      <p>
+        <button id="entryModeToggle">Switch entry modes</button>
+        <span class="help-cursor subtext" title="Edit Mode lets you change previous filter options. Add Mode lets you quickly add something to the filter.">(?)</span>
+      </p>
 
       <div id="editModeContainer">
-        <textarea id="phraseList"></textarea>
-        <p id="phraseListCap" class="subtext input-subtext">Webpage titles that match phrases in this list will be blocked.</p>
+        <label>
+          <textarea id="phraseList"></textarea>
+          <p class="subtext input-subtext">Webpage titles that match phrases in this list will be blocked.</p>
+        </label>
 
-        <textarea id="urlList"></textarea>
-        <p id="urlListCap" class="subtext input-subtext">URLs (web addresses) that match phrases in this list will be blocked.</p>
+        <label>
+          <textarea id="urlList"></textarea>
+          <p class="subtext input-subtext">URLs (web addresses) that match phrases in this list will be blocked.</p>
+        </label>
       </div>
 
       <div id="addModeContainer">
-        <input id="phraseAdd"></input><button id="phraseAddButton" disabled>Add</button>
-        <p class="subtext input-subtext">Phrases added here are blocked from webpage titles.</p>
+        <form autocomplete="off">
+          <input id="phraseAdd" autocomplete="off"></input>
+          <button id="phraseAddButton" disabled>Add</button>
+          <label for="phraseAdd" class="subtext input-subtext">Phrases added here are blocked from webpage titles.</label>
+        </form>
 
-        <input id="urlAdd"></input><button id="urlAddButton" disabled>Add</button>
-        <p class="subtext input-subtext">Phrases added here are blocked from URLs (web addresses).</p>
+        <form autocomplete="off">
+          <input id="urlAdd" autocomplete="off"></input>
+          <button id="urlAddButton" disabled>Add</button>
+          <label for="urlAdd" class="subtext input-subtext">Phrases added here are blocked from URLs (web addresses).</label>
+        </form>
       </div>
 
     </div> <!-- /indent -->
