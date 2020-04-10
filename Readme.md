@@ -1,4 +1,11 @@
 # Goodness
+
+April 10, 2020 — I'm archiving this repository. I used to be really proud of Goodness. It was one of my first "real" projects. It probably helped me reach some achievements in high school, and it boosted my confidence as a programmer.
+
+I sold it long ago. I'm afraid that the new owners just wanted to use it to push ads on people. To those people, I'm sorry. I didn't know that would happen when I sold it. I hope it didn't hurt anyone too much.
+
+Archiving repository.
+
 ## An extension for Chrome (Safari coming soon)
 
 ### FAQ
